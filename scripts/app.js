@@ -11,25 +11,23 @@ function init() {
     'CSS',
     'JavaScript',
     'SASS',
-    'React',
-    'Node.js',
-    'MongoDB',
-    'Express',
-    'Python',
-    'Django',
-    'PostgreSQL',
     'Git',
-    'Yarn',
-    'npm',
+    'Laravel',
+    'Flutter',
+    'React',
     'VS Code',
-    'Insomnia',
-    'TablePlus',
+    'npm',
+    'PostgreSQL',
+    'HeidiSQL',
+    'Node.js',
+    'Yarn',
     'Heroku'
   ]
 
   const design = [
     'Illustrator',
     'Photoshop',
+    'Figma',
     'Trello'
   ]
 
