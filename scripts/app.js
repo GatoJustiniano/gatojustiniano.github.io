@@ -13,13 +13,13 @@ function init() {
     'SASS',
     'Git',
     'Laravel',
-    'Flutter',
-    'React',
     'VS Code',
     'npm',
     'PostgreSQL',
     'HeidiSQL',
     'Node.js',
+    'Flutter',
+    'React',
     'Yarn',
     'Heroku'
   ]
