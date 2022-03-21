@@ -23,6 +23,13 @@ function init() {
     'Yarn',
     'Heroku'
   ]
+  const development1 = [
+    'Node.js',
+    'Flutter',
+    'React',
+    'Yarn',
+    'Heroku'
+  ]
 
   const design = [
     'Illustrator',
@@ -83,7 +90,8 @@ function init() {
   }
   
   mapSkills(development,skillBox[0])
-  mapSkills(design,skillBox[1])
+  mapSkills(development1,skillBox[1])
+  mapSkills(design,skillBox[2])
 
   const mapOtherSkills = (arr, target) =>{
     let delay = 0.1
@@ -203,7 +211,7 @@ function init() {
     }
   }  
 
- 
+
   const hoverTextEffect = () =>{
     title.innerHTML = ''
     triggerShuffle(title, 'Andres Justiniano', 4)
