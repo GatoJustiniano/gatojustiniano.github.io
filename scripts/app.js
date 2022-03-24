@@ -11,18 +11,21 @@ function init() {
     'CSS',
     'JavaScript',
     'Git',
+    'Github',
     'Laravel',
     'VS Code',
     'PostgreSQL',
+    'MySql',
     'HeidiSQL',
   ]
   const nivelMedio = [
     'Node.js',
     'npm',
+    'Yarn',
     'SASS',
+    'Bootstrap',
     'Flutter',
     'React',
-    'Yarn',
     'Heroku'
   ]
 
