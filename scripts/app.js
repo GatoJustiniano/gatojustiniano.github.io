@@ -6,25 +6,20 @@ function init() {
   const pageTop = document.querySelector('.page_top_nav')
   const bunnyWrapper = document.querySelector('.bunny_wrapper')
   const wrapper = document.querySelector('.wrapper')
-  const development = [
+  const nivelAvanzado = [
     'HTML',
     'CSS',
     'JavaScript',
-    'SASS',
     'Git',
     'Laravel',
     'VS Code',
-    'npm',
     'PostgreSQL',
     'HeidiSQL',
-    'Node.js',
-    'Flutter',
-    'React',
-    'Yarn',
-    'Heroku'
   ]
-  const development1 = [
+  const nivelMedio = [
     'Node.js',
+    'npm',
+    'SASS',
     'Flutter',
     'React',
     'Yarn',
@@ -89,8 +84,8 @@ function init() {
     })
   }
   
-  mapSkills(development,skillBox[0])
-  mapSkills(development1,skillBox[1])
+  mapSkills(nivelAvanzado,skillBox[0])
+  mapSkills(nivelMedio,skillBox[1])
   mapSkills(design,skillBox[2])
 
   const mapOtherSkills = (arr, target) =>{
