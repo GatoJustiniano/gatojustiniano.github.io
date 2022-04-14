@@ -11,7 +11,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
   <h1>Readme Drawing</h1>
   
   <p>
-    proyecto individual con Laravel! 
+    proyecto individual! 
   </p>
 </div>
 <br />
@@ -95,6 +95,6 @@ The Laravel framework is open-sourced software Licenciad under the [MIT Licencia
 <!-- Contacto -->
 ## :handshake: Contacto
 
-Andres Justiniano - [@twitter_handle](https://twitter.com/andresredss) - andres_liverpool@gmail.com
+Andres Justiniano - [@twitter_](https://twitter.com/redsjustiniano) - andres_liverpool@gmail.com
 
 Project Link: [https://gatojustiniano.github.io/](https://gatojustiniano.github.io/) 
