@@ -13,7 +13,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
   <p>
     proyecto individual con Laravel! 
   </p>
-
+<div>
 <br />
 
 <!-- Table of Contents -->
