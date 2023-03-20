@@ -23,6 +23,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
   * [Screenshots](#camera-screenshots)
   * [Desarrollo](#space_invader-desarrollo)
   * [Colores](#art-colores)
+- [Ayuda memoria](#camera-ayuda memoria)
 - [Licencia](#warning-Licencia)
 - [Contacto](#handshake-Contacto)
 
@@ -102,11 +103,11 @@ number_format($monto, 2)
 
 ejemplo 
 
-$monto = 1002,5
+$monto = 2981,456 
 
-number_format($monto, 2, '.', '')
+number_format($monto, 2)
 
-Resultado: 1,002.5
+Resultado: 2,981.46
 
 
 Escenario 2
@@ -117,11 +118,11 @@ number_format($data_venta->grand_total, 2, '.', '')
 
 ejemplo 
 
-$monto = 1002,5
+$monto = 1302,453
 
 number_format($monto, 2, '.', '')
 
-Resultado: 1002.5
+Resultado: 1302,45
 
 
 <!-- Licencia -->
