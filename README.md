@@ -23,7 +23,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
   * [Screenshots](#camera-screenshots)
   * [Desarrollo](#space_invader-desarrollo)
   * [Colores](#art-colores)
-- [Ayuda memoria](#camera-ayuda memoria)
+- [Ayuda memoria](#camera-ayuda)
 - [Licencia](#warning-Licencia)
 - [Contacto](#handshake-Contacto)
 
@@ -89,7 +89,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
 | Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
 <!-- Ayuda memoria -->
-## :camera: Ayuda memoria
+## :camera: Ayuda
 
 Para casos de enumerar montos con hasta dos decimales 
 
