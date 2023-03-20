@@ -87,6 +87,27 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
 | Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
 | Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
+<!-- Ayuda memoria -->
+## :info: Ayuda memoria
+
+Para casos de enumerar montos con hasta dos decimales 
+number_format()
+
+Escenario 1 
+Para redondear los montos máximo a dos decimales es: 
+number_format($monto, 2)
+ejemplo 
+$monto = 1002,5
+number_format($monto, 2, '.', '')
+Resultado: 1,002.5
+
+Escenario 2
+y que estos montos tengan dos decimales, y superados las mil unidades sean sin comas: 
+number_format($data_venta->grand_total, 2, '.', '')
+ejemplo 
+$monto = 1002,5
+number_format($monto, 2, '.', '')
+Resultado: 1002.5
 <!-- Licencia -->
 ## :warning: Licencia
 
