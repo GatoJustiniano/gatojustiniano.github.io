@@ -88,7 +88,7 @@ y ultilizado para uso personal de GatoJustiniano para presentación de futuros p
 | Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
 <!-- Ayuda memoria -->
-## :info: Ayuda memoria
+## :camera: Ayuda memoria
 
 Para casos de enumerar montos con hasta dos decimales 
 number_format()
