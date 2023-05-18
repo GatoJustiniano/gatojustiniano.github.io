@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <div class="form-group row roomselectionform">
+
+  <label for="roomSelected" class="col-sm-1 col-form-label"><?php echo $lang['room']; ?></label>
+  <div class="col-sm-6">
+    <select class="form-control roomselectroom" id="roomSelected" name="room_uid">
+      <optgroup class='def-cursor' 
+        label='Habitación' 
+        data-totalbeds='Total Camas'
+        data-baseprice='Precio base'
+        data-status='Estado'
+        >
+
+        <option value="" data-totalbeds='' data-baseprice='' data-status=''>
+          --<?php echo $lang['select'].' '.$lang['room']; ?>--</option>
+        <?php 
+        foreach($allrooms as $room)
+        {
+        ?>
+          <option 
+            data-totalbeds="<?php echo $room['allbeds']; ?>"
+            data-baseprice="<?php echo $options['currency_symbol']; ?> <?php echo $room['room_price']; ?>"
+            data-status="<?php if($room['room_status'] == 1 ) echo $lang['occupied']; ?> <?php if($room['room_status'] == 0 ) echo $lang['available']; ?>"
+            value="<?php echo $room['room_uid']; ?>" <?php if($room['room_status'] == 1 ) echo 'disabled'; ?>
+            ><?php echo $room['room_name']; ?>
+          </option>
+        <?php
+        }
+        ?>
+    </select>
+    <?php echo form_error('room_uid', '<div class="alert alert-danger alert-dismissible alertsm">', '</div>'); ?>
+  </div>
+
+  </div>
+</html>
+
+
+
+<script>
+  // selectAsignarHabitacion
+  $('.roomselectroom').select2({
+      width: '100%',
+    templateResult: formatRoomSelect2,
+    theme: 'bootstrap4'
+  });
+  function formatRoomSelect2(data) {
+    var status = $(data.element).data('status');
+    var totalbeds = $(data.element).data('totalbeds');
+    var baseprice = $(data.element).data('baseprice');
+    var classAttr = $(data.element).attr('class');
+    var hasClass = typeof classAttr != 'undefined';
+    classAttr = hasClass ? ' ' + classAttr : '';
+
+    var $result = $(
+      '<div class="row">' +
+      '<div class="col-md-3 col-xs-3' + classAttr + '">' + data.text + '</div>' +
+      '<div class="col-md-3 col-xs-3' + classAttr + '">' + status + '</div>' +
+      '<div class="col-md-3 col-xs-3' + classAttr + '">' + totalbeds + '</div>' +
+      '<div class="col-md-3 col-xs-3' + classAttr + '">' + baseprice + '</div>' +
+      '</div>'
+    );
+    return $result;
+  }
+</script>
