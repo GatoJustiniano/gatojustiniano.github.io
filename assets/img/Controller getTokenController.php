@@ -1,3 +1,5 @@
+<?php
+
 public function getToken(){
     $pos_setting    = PosSetting::latest()->first();
     $user_siat      = $pos_setting->user_siat;
