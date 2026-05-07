@@ -1,0 +1,143 @@
+<t t-name="l10n_bo_bolivian_invoice.logo_position_top">
+            <div class="row" style="font-size:13px;">
+                <div class="col-12">
+                     <t t-if="o.pos_id.logo_position == 'top'">
+                        <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                            <tr>
+                                <td class="m-0 p-0" style="width:35%; vertical-align: top; line-height:1.4;">
+                                    <strong t-esc="o.company_id.name"/><br/>
+                                    <strong t-field="o.pos_id.branch_office_id.name"/><br/>
+                                    <strong>No. <t t-esc="o.pos_id.name"/></strong><br/>
+                                    Dirección: <t t-esc="o.pos_id.address"/><br/>
+                                    Teléfono: <t t-esc="o.company_id.phone"/><br/>
+                                    <strong t-field="o.branch_office_id.municipality_id.name"/>
+                                </td>
+                                <td class="m-0 p-0 text-center" style="vertical-align: top;">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" t-att-style="o.get_logo_style()" style="max-width:100%;object-fit:contain;" alt="Logo"/>
+                                </td>
+                                <td class="m-0 p-0" style="width:35%; vertical-align: top;">
+                                    <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                                        <tr>
+                                            <td class="m-0 p-0" style="width: 150px;"><strong>NIT</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.company_id.vat"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>FACTURA Nº</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.getInvoiceNumber()"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>CÓD. AUTORIZACIÓN</strong></td>
+                                            <td class="m-0 p-0" style="-ms-word-break: break-all; word-break: break-all;  word-break: break-word; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; width: 180px;">
+                                                <t t-esc="o.cuf"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                    <t t-if="o.pos_id.logo_position == 'left'">
+                        <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                            <tr>
+                                <td class="m-0 p-0" style="width:15%; vertical-align: top; text-align:top;">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" t-att-style="o.get_logo_style()" style="max-width:100%;object-fit:contain;" alt="Logo"/>
+                                </td>
+                                <td class="m-0 p-0" style="width:50%; vertical-align: top; line-height:1.4;">
+                                    <strong t-esc="o.company_id.name"/><br/>
+                                    <strong t-field="o.pos_id.branch_office_id.name"/><br/>
+                                    <strong>No. <t t-esc="o.pos_id.name"/></strong><br/>
+                                    Dirección: <t t-esc="o.pos_id.address"/><br/>
+                                    Teléfono: <t t-esc="o.company_id.phone"/><br/>
+                                    <strong t-field="o.branch_office_id.municipality_id.name"/>
+                                </td>
+                                <td class="m-0 p-0" style="width:35%; vertical-align: top;">
+                                    <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                                        <tr>
+                                            <td class="m-0 p-0" style="width: 150px;"><strong>NIT</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.company_id.vat"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>FACTURA Nº</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.getInvoiceNumber()"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>CÓD. AUTORIZACIÓN</strong></td>
+                                            <td class="m-0 p-0" style="-ms-word-break: break-all; word-break: break-all;  word-break: break-word; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; width: 180px;">
+                                                <t t-esc="o.cuf"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                    <t t-if="o.pos_id.logo_position == 'right'">
+                        <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                            <tr>
+                                <td class="m-0 p-0" style="width:50%; vertical-align: top; line-height:1.4;">
+                                    <strong t-esc="o.company_id.name"/><br/>
+                                    <strong t-field="o.pos_id.branch_office_id.name"/><br/>
+                                    <strong>No. <t t-esc="o.pos_id.name"/></strong><br/>
+                                    Dirección: <t t-esc="o.pos_id.address"/><br/>
+                                    Teléfono: <t t-esc="o.company_id.phone"/><br/>
+                                    <strong t-field="o.branch_office_id.municipality_id.name"/>
+                                </td>
+                                <td class="m-0 p-0" style="width:35%; vertical-align: top;">
+                                    <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                                        <tr>
+                                            <td class="m-0 p-0" style="width: 150px;"><strong>NIT</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.company_id.vat"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>FACTURA Nº</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.getInvoiceNumber()"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>CÓD. AUTORIZACIÓN</strong></td>
+                                            <td class="m-0 p-0" style="-ms-word-break: break-all; word-break: break-all;  word-break: break-word; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; width: 180px;">
+                                                <t t-esc="o.cuf"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="m-0 p-0" style="width:15%; vertical-align: top; text-align:top;">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" t-att-style="o.get_logo_style()" style="max-width:100%;object-fit:contain;" alt="Logo"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                    <t t-else="else">
+                        <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                            <tr>
+                                <td class="m-0 p-0" style="width:70%; vertical-align: top; line-height:1.4;">
+                                    <strong t-esc="o.company_id.name"/><br/>
+                                    <strong t-field="o.pos_id.branch_office_id.name"/><br/>
+                                    <strong>No. <t t-esc="o.pos_id.name"/></strong><br/>
+                                    Dirección: <t t-esc="o.pos_id.address"/><br/>
+                                    Teléfono: <t t-esc="o.company_id.phone"/><br/>
+                                    <strong t-field="o.branch_office_id.municipality_id.name"/>
+                                </td>
+                                <td class="m-0 p-0" style="width:30%; vertical-align: top;">
+                                    <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                                        <tr>
+                                            <td class="m-0 p-0" style="width: 150px;"><strong>NIT</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.company_id.vat"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>FACTURA Nº</strong></td>
+                                            <td class="m-0 p-0"><t t-esc="o.getInvoiceNumber()"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="m-0 p-0"><strong>CÓD. AUTORIZACIÓN</strong></td>
+                                            <td class="m-0 p-0" style="-ms-word-break: break-all; word-break: break-all;  word-break: break-word; -ms-hyphens: auto; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; width: 180px;">
+                                                <t t-esc="o.cuf"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+            </div>
+        </t>
