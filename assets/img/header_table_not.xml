@@ -141,3 +141,72 @@
                 </div>
             </div>
         </t>
+
+
+
+## VERSIÓN BIEN HECHA
+<template id="logo_position_top">
+            <div class="row" style="font-size:13px; line-height:1.4;">
+                <t t-set="info_empresa">
+                    <div class="company-info" style="vertical-align: top;">
+                        <strong style="font-size:18px" t-esc="o.company_id.name.upper()"/><br/>
+                        <strong t-field="o.pos_id.branch_office_id.name"/><br/>
+                        <strong>No. <t t-esc="o.pos_id.name"/></strong><br/>
+                        Dirección: <t t-esc="o.pos_id.address"/><br/>
+                        Teléfono: <t t-esc="o.company_id.phone"/><br/>
+                        <strong t-field="o.branch_office_id.municipality_id.name"/>
+                    </div>
+                </t>
+                <t t-set="logo_img">
+                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" t-att-style="o.get_logo_style()" style="max-width:100%; object-fit:contain;" alt="Logo"/>
+                </t>
+                <t t-set="datos_factura">
+                    <table class="table table-sm table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                        <tr>
+                            <td class="p-0" style="width: 110px;"><strong>NIT</strong></td>
+                            <td class="p-0"><t t-esc="o.company_id.vat"/></td>
+                        </tr>
+                        <tr>
+                            <td class="p-0"><strong>FACTURA Nº</strong></td>
+                            <td class="p-0"><t t-esc="o.getInvoiceNumber()"/></td>
+                        </tr>
+                        <tr>
+                            <td class="p-0"><strong>CÓD. AUTORIZACIÓN</strong></td>
+                            <td class="p-0" style="word-break: break-all; min-width: 150px;">
+                                <t t-esc="o.cuf"/>
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+                <!-- Construcción del Layout basado en la posición -->
+                <div class="col-12">
+                    <table class="table table-borderless m-0 p-0" style="width:100%; border-collapse: collapse;">
+                        <tr>
+                            <!-- Caso LOGO (Centrado) -->
+                            <t t-if="o.pos_id.logo_position == 'center'">
+                                <td style="width:35%; vertical-align: top;"><t t-out="info_empresa"/></td>
+                                <td class="text-center" style="vertical-align: top;"><t t-out="logo_img"/></td>
+                                <td style="width:35%; vertical-align: top;"><t t-out="datos_factura"/></td>
+                            </t>
+                            <!-- Caso LOGO IZQUIERDA (Left) -->
+                            <t t-if="o.pos_id.logo_position == 'left'">
+                                <td style="width:15%; vertical-align: top;"><t t-out="logo_img"/></td>
+                                <td style="width:50%; vertical-align: top;"><t t-out="info_empresa"/></td>
+                                <td style="width:35%; vertical-align: top;"><t t-out="datos_factura"/></td>
+                            </t>
+                            <!-- Caso LOGO DERECHA (Right) -->
+                            <t t-if="o.pos_id.logo_position == 'right'">
+                                <td style="width:50%; vertical-align: top;"><t t-out="info_empresa"/></td>
+                                <td style="width:35%; vertical-align: top;"><t t-out="datos_factura"/></td>
+                                <td style="width:15%; vertical-align: top;"><t t-out="logo_img"/></td>
+                            </t>
+                            <!-- Caso SIN LOGO (None) -->
+                            <t t-if="not o.pos_id.logo_position or o.pos_id.logo_position == 'none'">
+                                <td style="width:65%; vertical-align: top;"><t t-out="info_empresa"/></td>
+                                <td style="width:35%; vertical-align: top;"><t t-out="datos_factura"/></td>
+                            </t>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </template>
